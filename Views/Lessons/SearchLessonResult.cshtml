@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AthleticTrainingWebApp.Models.Lesson>
+
+@{
+    ViewBag.Title = "SearchLessonResult";
+}
+
+<h2>SearchLessonResult</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructor.UserFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.School.SchoolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.UserFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LessonFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LessonLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LessonSport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LessonDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instructor.UserFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.School.SchoolName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.UserFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LessonFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LessonLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LessonSport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LessonDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LId })
+        </td>
+    </tr>
+}
+
+</table>

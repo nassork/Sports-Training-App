@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AthleticTrainingWebApp.Models.School>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SchoolName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SchoolAddress)
+        </td>
+        <td>
+            @if (@item.SchoolPhoto != null)
+            {
+                <img src='@Url.Action("ShowSchoolImage", "Image", new { id = item.SchoolId })' />
+            }
+            else
+            {
+                @Html.DisplayText("Photo Not Available")
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SchoolId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SchoolId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SchoolId })
+        </td>
+    </tr>
+}
+
+</table>

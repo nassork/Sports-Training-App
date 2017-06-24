@@ -1,0 +1,74 @@
+﻿@model AthleticTrainingWebApp.Models.Lesson
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lesson</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructor.UserFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructor.UserFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.School.SchoolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.School.SchoolName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.UserFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.UserFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LessonFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LessonFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LessonLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LessonLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LessonSport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LessonSport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LessonDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LessonDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

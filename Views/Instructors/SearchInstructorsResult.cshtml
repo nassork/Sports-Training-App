@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AthleticTrainingWebApp.Models.Instructor>
+
+@{
+    ViewBag.Title = "SearchInstructorsResult";
+}
+
+<h2>Search Instructors Result</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ILName
+        </th>
+       
+        <th>
+            IPhoneNumber
+        </th>
+        <th>
+           ISport
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserFullName)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.IRate)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISport)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InstructorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InstructorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InstructorId })
+        </td>
+    </tr>
+}
+
+</table>

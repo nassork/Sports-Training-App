@@ -1,0 +1,67 @@
+﻿<h2>Search Lesson</h2>
+
+
+<hr />
+
+@using (Html.BeginForm("SearchLesson", "Lessons", FormMethod.Post))
+{
+
+
+
+
+    @Html.Label("Enter a Sport ")
+    @Html.TextBox("Sport")
+    <br />
+
+    <input type="submit" class="btn btn-default" value="Search Lessons" />
+
+}   
+
+
+
+
+
+
+
+
+
+@*@*@*@*<h2>Search Lesson</h2>
+
+<hr />
+
+@using (Html.BeginForm("SearchLesson", "Lessons", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.Label("Sport", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("LessonSport", (SelectList)ViewBag.Lessons, htmlAttributes: new { @class = "form-control" })
+        </div>
+        @Html.Label("School", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("SchoolId", (SelectList)ViewBag.Schools, htmlAttributes: new { @class = "form-control" })
+        </div>
+        @Html.Label("Instructor", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("InstructorId", (SelectList)ViewBag.Instructors, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+    </div>
+
+
+
+
+    @*@*@*@Html.Label("Enter Sport to find a Lesson")
+        @Html.TextBox("Sport")*@*@*@
+    @*<br />
+
+        <input type="submit" class="btn btn-default" value="Search Lesson" />*@
+
+    @*<div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Search for Lessons" class="btn btn-default" />
+        </div>
+    </div>*@
+
+
+

@@ -1,0 +1,50 @@
+﻿@model AthleticTrainingWebApp.Models.Instructor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Instructor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserFullName)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.IRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IRate)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISport)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InstructorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
